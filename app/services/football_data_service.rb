@@ -20,5 +20,4 @@ class FootballDataService
     response = FootballData.fetch(:teams, :players, id: id)
     response.key?('error') ? nil : response['players']
   end
-
 end
