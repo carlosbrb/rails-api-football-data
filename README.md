@@ -1,11 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ruby version
 
-Things you may want to cover:
+- Ruby 2.4
 
-* Ruby version
+### Installation
+
+Run the following commands in your terminal
+
+```# bundle install```
+```# rake db:create ```
+```# rake db:migrate ```
+
 
 * System dependencies
 
