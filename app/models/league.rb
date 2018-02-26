@@ -16,9 +16,9 @@ class League < ApplicationRecord
   end
 
   def add_teams(data)
-    teams = data.league_teams(league)
-    teams.each do |team|
-      new_team = self.teams.build(
+    forg_teams = data.league_teams(league)
+    forg_teams.each do |team|
+      new_team = teams.build(
         name: team['name'],
         code: team['code'],
         short_name: team['shortName'],

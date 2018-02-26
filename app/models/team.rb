@@ -14,8 +14,4 @@ class Team < ApplicationRecord
       )
     end
   end
-
-  def players_count
-    players.count
-  end
 end

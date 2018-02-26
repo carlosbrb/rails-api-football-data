@@ -1,6 +1,6 @@
 # Service class to get data from https://www.football-data.org/
 # Using gem: https://github.com/delta4d/football-data
-class FootballDataService
+class Footballer
   attr_reader :competitions
   def initialize
     @competitions = FootballData.fetch(:competitions)
@@ -12,12 +12,13 @@ class FootballDataService
 
   def league_teams(code)
     league = find_league(code).first
+    return [] if league.blank?
     response = FootballData.fetch(:competitions, :teams, id: league['id'])
-    response.key?('error') ? nil : response['teams']
+    response.key?('error') ? [] : response['teams']
   end
 
   def team_players(id)
     response = FootballData.fetch(:teams, :players, id: id)
-    response.key?('error') ? nil : response['players']
+    response.key?('error') ? [] : response['players']
   end
 end
