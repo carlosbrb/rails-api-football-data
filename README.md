@@ -9,22 +9,13 @@
 Run the following commands in your terminal
 
 ```# bundle install```
+
 ```# rake db:create ```
+
 ```# rake db:migrate ```
 
+If you want to restore the database schema mannually, is located in the ```db``` directory (football.org-leagues.sql)
 
-* System dependencies
+### Running the test suite
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+run ```rake``` in your terminal.
