@@ -1,5 +1,7 @@
 # README
 
+A challenge using football.org api
+
 ### Ruby version
 
 - Ruby 2.4
